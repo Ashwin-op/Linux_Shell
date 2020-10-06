@@ -163,7 +163,7 @@ int formatCommand(char inputBuffer[], char *args[], int *flag)
         count = 10;
 }
 
-int main(void)
+int main()
 {
     char cwd[MAX_LINE];           // Store the current working directory
     char inputBuffer[MAX_LINE];   // Buffer to hold the input command
@@ -176,7 +176,7 @@ int main(void)
     {
         flag = 0; // Flag = 0 by default
 
-        // FInding the current working directory
+        // Finding the current working directory
         if (getcwd(cwd, sizeof(cwd)) == NULL)
         {
             perror("getcwd() error");
